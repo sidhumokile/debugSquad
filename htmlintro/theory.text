@@ -1,0 +1,90 @@
+HTML – Theory Notes
+1. Introduction
+
+HTML (HyperText Markup Language) is the standard language used for creating webpages.
+
+It is used to structure the content of a webpage.
+
+Works together with:
+
+CSS – for styling (colors, fonts, layout).
+
+JavaScript – for interactivity (animations, validation, dynamic content).
+
+2. Versions of HTML
+
+HTML 1.0 (1991): First version, very basic features.
+
+HTML 2.0 (1995): Introduced forms and basic elements.
+
+HTML 3.2 (1997): Added tables, applets, scripting.
+
+HTML 4.01 (1999): Introduced CSS support, more structured tags.
+
+XHTML (2000): Stricter rules based on XML.
+
+HTML5 (2014): Latest standard with multimedia support (audio, video), semantic elements, canvas, and responsive features.
+
+3. Structure of an HTML Document
+
+A basic HTML document is divided into two main parts:
+
+Head Section – contains metadata (title, charset, links to CSS, etc.)
+
+Body Section – contains visible content (headings, paragraphs, images, links).
+
+Example:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>This is a paragraph.</p>
+</body>
+</html>
+
+4. Core Components of HTML
+(a) Tags
+
+Tags are the building blocks of HTML.
+
+They define how the content should appear.
+
+Example:
+<p>This is a paragraph</p>
+
+(b) Attributes
+
+Attributes provide additional information about an element.
+
+Always written in the opening tag.
+
+Example:
+<img src="image.jpg" alt="Description">
+
+src → source of the image.
+
+alt → alternate text if the image is missing.
+
+(c) Elements
+
+An element consists of:
+
+Start Tag
+
+Content
+
+End Tag
+
+Example:
+<h1>Welcome to HTML</h1>
+
+Start tag: <h1>
+
+Content: Welcome to HTML
+
+End tag: </h1>
