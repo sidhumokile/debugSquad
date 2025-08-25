@@ -3,94 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Overview</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #2c3e50;
-        }
-        .section {
-            background: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        code {
-            background: #eee;
-            padding: 2px 5px;
-            border-radius: 4px;
-            font-size: 90%;
-        }
-        ul {
-            margin-left: 20px;
-        }
-    </style>
+    <title>HTML Tags Example with Explanation</title>
 </head>
 <body>
 
-    <h1>Introduction to HTML</h1>
-    <div class="section">
-        <p><b>HTML (HyperText Markup Language)</b> is the standard language used to create webpages. 
-        It structures the content on the web and works together with CSS (for styling) and JavaScript (for interactivity).</p>
-    </div>
+    <!-- ================== HEADING TAGS ================== -->
+    <!-- Headings are used to define titles or subtitles.
+         h1 is the largest, h6 is the smallest. -->
+    <h1>This is Heading 1 (Main Title)</h1>
+    <h2>This is Heading 2 (Section Title)</h2>
+    <h3>This is Heading 3 (Subsection Title)</h3>
+    <h4>This is Heading 4 (Subsection Title)</h4>
+    <h5>This is Heading 5 (Subsection Title)</h5>
+    <h6>This is Heading 6 (Subsection Title)</h6>
 
-    <h2>Versions of HTML</h2>
-    <div class="section">
-        <ul>
-            <li><b>HTML 1.0 (1991):</b> The first version, very basic.</li>
-            <li><b>HTML 2.0 (1995):</b> Introduced basic form elements.</li>
-            <li><b>HTML 3.2 (1997):</b> Added tables, applets, and scripting.</li>
-            <li><b>HTML 4.01 (1999):</b> Supported CSS, scripting, and more structure.</li>
-            <li><b>XHTML (2000):</b> Stricter XML-based HTML.</li>
-            <li><b>HTML5 (2014):</b> Latest standard with audio, video, semantic tags, canvas, and responsive design features.</li>
-        </ul>
-    </div>
+    <hr> <!-- Horizontal line for separation -->
 
-    <h2>Basic Structure of an HTML Document</h2>
-    <div class="section">
-        <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Page Title&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello, World!&lt;/h1&gt;
-    &lt;p&gt;This is a paragraph.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-        </pre>
-        <p>The structure includes <b>doctype, html, head, and body</b> sections.</p>
-    </div>
+    <!-- ================== PARAGRAPH TAG ================== -->
+    <h2>Sidhu</h2>
+    <p>
+        Hello! My name is Sidhu. I am passionate about learning new technologies and exploring web development.  
+        I enjoy building creative projects and continuously improving my skills.  
+        My goal is to become a skilled professional and contribute meaningfully to the tech world.
+    </p>
 
-    <h2>Core Components</h2>
+    <hr>
 
-    <div class="section">
-        <h3>1. Tags</h3>
-        <p>Tags define the start and end of an element. Example:</p>
-        <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
-    </div>
+    <!-- ================== PRE TAG ================== -->
+    <h2>Preformatted Text Example</h2>
+    <pre>
+Line 1       Keep spaces
+Line 2       and line breaks
+    exactly as written here.
+    </pre>
 
-    <div class="section">
-        <h3>2. Attributes</h3>
-        <p>Attributes provide extra information about elements. They are written inside the opening tag.</p>
-        <code>&lt;img src="image.jpg" alt="Description"&gt;</code>
-    </div>
+    <hr>
 
-    <div class="section">
-        <h3>3. Elements</h3>
-        <p>An element consists of a start tag, content, and an end tag.</p>
-        <code>&lt;h1&gt;Welcome to HTML&lt;/h1&gt;</code>
-        <p>Here, <code>&lt;h1&gt;</code> is the start tag, "Welcome to HTML" is the content, and <code>&lt;/h1&gt;</code> is the end tag.</p>
-    </div>
+    <!-- ================== LIST TAGS ================== -->
+    <h1>List Tags in HTML</h1>
+
+    <!-- Unordered List: bullet points -->
+    <h2>Unordered List Example</h2>
+    <p>Unordered lists display items with bullet points:</p>
+    <ul>
+        <li>Fruits
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Cherry</li>
+            </ul>
+        </li>
+        <li>Vegetables
+            <ul>
+                <li>Carrot</li>
+                <li>Potato</li>
+                <li>Tomato</li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Ordered List: numbered -->
+    <h2>Ordered List Example</h2>
+    <p>Ordered lists display items in a numbered sequence:</p>
+    <ol>
+        <li>Morning Routine
+            <ol>
+                <li>Wake up</li>
+                <li>Brush teeth</li>
+                <li>Exercise</li>
+                <li>Breakfast</li>
+            </ol>
+        </li>
+        <li>Daily Tasks
+            <ol type="A">
+                <li>Work on assignments</li>
+                <li>Attend classes</li>
+                <li>Read a book</li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- Definition List: term and description -->
+    <h2>Definition List Example</h2>
+    <p>Definition lists are used for terms and their meanings:</p>
+    <dl>
+        <dt><b>HTML</b></dt>
+        <dd>HyperText Markup Language – the standard for web pages.</dd>
+
+        <dt><b>CSS</b></dt>
+        <dd>Cascading Style Sheets – used for styling web pages.</dd>
+
+        <dt><b>JavaScript</b></dt>
+        <dd>A scripting language for adding interactivity to web pages.</dd>
+
+        <dt><b>HTTP</b></dt>
+        <dd>HyperText Transfer Protocol – the foundation of data communication on the web.</dd>
+
+        <dt><b>URL</b></dt>
+        <dd>Uniform Resource Locator – the address of a resource on the internet.</dd>
+    </dl>
 
 </body>
 </html>
