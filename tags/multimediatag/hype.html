@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Example</title>
+</head>
+
+<body>
+    <!-- ========================= AUDIO SECTION ========================= -->
+    <h1>Audio Player</h1>
+    <!-- Audio with preload, autoplay (disabled by default in browsers), loop, and controls -->
+    <audio controls preload="metadata" controlsList="nodownload">
+        <source src="/assets/audio/audio-for-video-editing-11-368969.mp3" type="audio/mpeg">
+        <source src="/assets/audio/audio-for-video-editing-11-368969.ogg" type="audio/ogg">
+        Your browser does not support the <code>audio</code> element.
+    </audio>
+    <p>
+        🎵 This is an audio player with multiple source formats (<code>mp3</code>, <code>ogg</code>) for better browser
+        compatibility.  
+        Attributes used: <b>controls</b>, <b>preload="metadata"</b>, and <b>controlsList="nodownload"</b>.
+    </p>
+
+    <!-- ========================= VIDEO SECTION ========================= -->
+    <h1>Video Player</h1>
+    <!-- Video with poster, preload, and multiple formats -->
+    <video controls height="300" width="500" preload="metadata" poster="/assets/video/video-poster.jpg" controlsList="nodownload">
+        <source src="/assets/video/991403-hd_1920_1080_25fps.mp4" type="video/mp4">
+        <source src="/assets/video/991403-hd_1920_1080_25fps.webm" type="video/webm">
+        <source src="/assets/video/991403-hd_1920_1080_25fps.ogg" type="video/ogg">
+        Your browser does not support the <code>video</code> tag.
+    </video>
+    <p>
+        🎬 This video player supports multiple formats (<code>mp4</code>, <code>webm</code>, <code>ogg</code>) for wide
+        browser support.  
+        Attributes used: <b>controls</b>, <b>poster</b>, <b>preload="metadata"</b>, and <b>controlsList="nodownload"</b>.
+    </p>
+
+    <!-- ========================= YOUTUBE IFRAME SECTION ========================= -->
+    <h1>Embedded YouTube Video</h1>
+    <br>
+    <!-- Corrected iframe (only one <) with technical attributes -->
+    <iframe width="667" height="375"
+        src="https://www.youtube.com/embed/Vtq-VWlDOSU?rel=0&modestbranding=1&autoplay=0&mute=0"
+        title="Oggy and the Cockroaches - Oggy on the Trail (Compilation)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+    <p>
+        ▶️ This embedded video is from <b>YouTube</b> using the <code>&lt;iframe&gt;</code> tag.  
+        Extra parameters: <b>rel=0</b> (no related videos at the end), <b>modestbranding=1</b> (minimal YouTube branding).
+    </p>
+
+</body>
+
+</html>
