@@ -1,44 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>User Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-100 text-gray-800">
+  <div class="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-md mt-10">
+    <h1 class="text-2xl font-bold mb-6 text-center">Enter User Details</h1>
+    <form action="#" class="space-y-4">
+      <!-- First Name -->
+      <div>
+        <label for="first-name" class="block font-medium">First Name</label>
+        <input type="text" id="first-name" placeholder="Enter name" maxlength="12" minlength="3" required
+          class="w-full border rounded px-3 py-2" />
+      </div>
 
-<body>
-  <form action="#" method="post">
-    <h1 class="text-xl font-bold text-center mb-4">Registration Page</h1> <!-- firstname -->
-    <div> <label class="block font-medium">Firstname</label> <input type="text" id="firstname" required> </div> <br>
-    <!-- lastname -->
-    <div> <label class="block font-medium">Lastname</label> <input type="text" id="lastname" required> </div> <br>
-    <!-- course -->
-    <div> <label class="block font-medium">Course</label> <select name="course" class="w-full border rounded px-3 py-2">
-        <option value="COURSE">COURSE</option>
-        <option value="CSE">CSE</option>
-        <option value="ECE">ECE</option>
-        <option value="EEE">EEE</option>
-      </select> </div> <br> <!-- gender -->
-    <div> <label for="gender" class="block font-medium">Gender:</label>
-      <div class="flex space-x-4 mt-1"> <label class="flex items-center"> <input type="radio" name="gender" value="male"
-            class="mr-1"> Male <br> </label> <label class="flex items-center"> <input type="radio" name="gender"
-            value="female" class="mr-1"> Female <br> </label> <label class="flex items-center"> <input type="radio"
-            name="gender" value="other" class="mr-1"> Other <br> </label> </div> <br> <!-- phone number -->
-      <div> <label class="block font-medium">Phone Number</label> <span class="bg-gray-200 px-3 py-2 border rounded-l">
-          +91</span> <input type="tel" class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-sky-300"
-          required> </div> <br> <!-- Address -->
-      <div> <label class="block font-medium">Address</label> <br> <input rows="6" required></textarea> </div> <br>
-      <!-- email -->
-      <div> <label class="block font-medium">Email</label> <input type="email" id="email" required> </div> <br>
-      <!-- password -->
-      <div> <label class="block font-medium">Password</label> <input type="password"
-          class="w-full border rounded-lg px-3 py-2 focus:ring focus:ring-sky-300" required> </div> <br>
-      <!-- confirm password -->
-      <div> <label class="block font-medium">Confirm Password</label> <input type="password" id="confirm-password"
-          required> </div> <br> <!-- submit button -->
-      <div> <button type="submit">Register</button> </div>
-  </form>
+      <!-- Last Name -->
+      <div>
+        <label for="last-name" class="block font-medium">Last Name</label>
+        <input type="text" id="last-name" placeholder="Last name" maxlength="12" minlength="3" required
+          class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block font-medium">Email ID</label>
+        <input type="email" id="email" placeholder="example@gmail.com" maxlength="30" minlength="3" required
+          class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Phone Number -->
+      <div>
+        <label for="phone" class="block font-medium">Phone Number</label>
+        <div class="flex items-center gap-2">
+          <span>+91</span>
+          <input type="tel" id="phone" minlength="10" maxlength="10" required
+            class="flex-1 border rounded px-3 py-2" />
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div>
+        <label class="block font-medium">Gender</label>
+        <div class="flex gap-4 mt-1">
+          <label><input type="radio" name="gender" value="male" /> Male</label>
+          <label><input type="radio" name="gender" value="female" /> Female</label>
+          <label><input type="radio" name="gender" value="others" /> Others</label>
+        </div>
+      </div>
+
+      <!-- DOB -->
+      <div>
+        <label for="dob" class="block font-medium">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Age -->
+      <div>
+        <label for="age" class="block font-medium">Age</label>
+        <input type="number" id="age" min="1" max="80" required class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Address -->
+      <div>
+        <label for="address" class="block font-medium">Address</label>
+        <textarea id="address" rows="4" placeholder="Address" required
+          class="w-full border rounded px-3 py-2"></textarea>
+      </div>
+
+      <!-- City -->
+      <div>
+        <label for="city" class="block font-medium">City</label>
+        <input type="text" id="city" placeholder="City" maxlength="12" minlength="3"
+          class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Pincode -->
+      <div>
+        <label for="pincode" class="block font-medium">Pincode</label>
+        <input type="number" id="pincode" placeholder="Pincode" class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Course -->
+      <div>
+        <label for="course" class="block font-medium">Course</label>
+        <select name="course" id="course" class="w-full border rounded px-3 py-2">
+          <option value="COURSE">COURSE</option>
+          <option value="CSE">CSE</option>
+          <option value="ECE">ECE</option>
+          <option value="EEE">EEE</option>
+        </select>
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="password" class="block font-medium">Password</label>
+        <input type="password" id="password" placeholder="Password" class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Confirm Password -->
+      <div>
+        <label for="confirm-password" class="block font-medium">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm Password"
+          class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Skills -->
+      <div>
+        <label class="block font-medium">Skills</label>
+        <div class="flex flex-col gap-1 mt-1">
+          <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
+          <label><input type="checkbox" name="skills" value="JAVA" /> JAVA</label>
+          <label><input type="checkbox" name="skills" value="PYTHON" /> PYTHON</label>
+        </div>
+      </div>
+
+      <!-- File Upload -->
+      <div>
+        <label for="file" class="block font-medium">Upload File</label>
+        <input type="file" id="file" required class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Salary Range -->
+      <div>
+        <label for="salary" class="block font-medium">Expected Salary</label>
+        <input type="range" id="salary" min="10000" max="50000" step="10000" class="w-full" />
+      </div>
+
+      <!-- Favorite Color -->
+      <div>
+        <label for="color" class="block font-medium">Favorite Color</label>
+        <input type="color" id="color" class="w-full h-10" />
+      </div>
+
+      <!-- URL -->
+      <div>
+        <label for="url" class="block font-medium">URL</label>
+        <input type="url" id="url" placeholder="www.example.com" required class="w-full border rounded px-3 py-2" />
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex flex-wrap gap-4 justify-center mt-6">
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Submit</button>
+        <button type="button" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Login</button>
+        <button type="button" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">Register</button>
+      </div>
+    </form>
+  </div>
 </body>
-
 </html>
