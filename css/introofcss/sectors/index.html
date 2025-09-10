@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CSS Selectors</h1>
+  <p>CSS selectors are patterns used to select and style HTML elements. They tell the browser <b>“which element(s) should get the style?”</b></p>
+
+  <hr>
+
+  <h2>1. Basic Selectors</h2>
+  <ul>
+    <li><b>Tag Selector</b> – targets HTML elements by their name.  
+      <br> Example: <code>h1 { color: red; }</code> will style all <code>&lt;h1&gt;</code> tags.
+      <br><i>Use when you want to style all elements of the same type.</i>
+    </li>
+    <br>
+    <li><b>Class Selector</b> – targets elements with a specific class.  
+      <br> Example: <code>.highlight { color: blue; }</code> applies only to <code>&lt;p class="highlight"&gt;</code>.  
+      <i>Use when multiple elements need the same style.</i>
+    </li>
+    <br>
+    <li><b>ID Selector</b> – targets a unique element with an ID.  
+      <br> Example: <code>#main { background: yellow; }</code> applies only to <code>&lt;div id="main"&gt;</code>.  
+      <i>Use when one specific element needs a unique style.</i>
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2>2. Combinators</h2>
+  <ul>
+    <li><b>Descendant ( )</b> – targets elements inside another element.  
+      <br> Example: <code>div p</code> = all <code>&lt;p&gt;</code> inside a <code>&lt;div&gt;</code>.
+    </li>
+    <br>
+    <li><b>Child (&gt;)</b> – targets direct children only.  
+      <br> Example: <code>div > p</code> = only the <code>&lt;p&gt;</code> that are direct children of <code>&lt;div&gt;</code>.
+    </li>
+    <br>
+    <li><b>Adjacent Sibling (+)</b> – targets the element immediately after another.  
+      <br> Example: <code>h2 + p</code> = the first <code>&lt;p&gt;</code> right after an <code>&lt;h2&gt;</code>.
+    </li>
+    <br>
+    <li><b>General Sibling (~)</b> – targets all siblings that follow an element.  
+      <br> Example: <code>h2 ~ p</code> = all <code>&lt;p&gt;</code> after an <code>&lt;h2&gt;</code> in the same parent.
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2>3. Pseudo-Selectors</h2>
+  <ul>
+    <li><b>Pseudo-Classes</b> – style elements based on state or position.  
+      <br> Examples:  
+      <code>a:hover { color: red; }</code> → link changes color on hover.  
+      <code>p:first-child { font-weight: bold; }</code> → first paragraph inside parent is bold.
+    </li>
+    <br>
+    <li><b>Pseudo-Elements</b> – style parts of an element.  
+      <br> Examples:  
+      <code>p::first-letter { font-size: 24px; }</code> → only the first letter of <code>&lt;p&gt;</code>.  
+      <code>p::after { content: "✔"; }</code> → adds text/icon after each paragraph.
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2>4. Special Selectors</h2>
+  <ul>
+    <li><b>Attribute Selectors</b> – target elements by attribute and value.  
+      <br> Example: <code>input[type="text"] { border: 1px solid black; }</code>.
+    </li>
+    <br>
+    <li><b>Universal Selector (*)</b> – selects all elements on the page.  
+      <br> Example: <code>* { margin: 0; }</code> resets margin for all.
+    </li>
+    <br>
+    <li><b>Grouping Selector (,)</b> – apply same style to multiple elements.  
+      <br> Example: <code>h1, h2, p { color: gray; }</code>.
+    </li>
+  </ul>
+
+  <hr>
+
+  <h2> Tips</h2>
+  <ul>
+    <li>Use <b>classes</b> for reusable styles.</li>
+    <li>Use <b>IDs</b> only for unique elements.</li>
+    <li>Combinators help you target elements based on hierarchy.</li>
+    <li>Pseudo-classes are great for interactive effects.</li>
+    <li>Pseudo-elements let you style parts of content without changing HTML.</li>
+  </ul>
+
+</body>
+</html>

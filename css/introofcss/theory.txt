@@ -1,0 +1,77 @@
+CSS Types in HTML
+
+CSS (Cascading Style Sheets) is used to style web pages (colors, fonts, layouts, etc.).
+There are 3 main ways to apply CSS in HTML:
+
+✅ 1. External CSS
+
+CSS is written in a separate file (example: style.css).
+
+That file is linked inside the <head> of the HTML using <link>.
+
+Best for big projects because all pages can use the same CSS file.
+
+👉 Example:
+
+<link rel="stylesheet" href="style.css">
+
+
+📌 Advantages:
+
+Cleaner code (HTML and CSS separate).
+
+Easy to update style for multiple pages.
+
+📌 Disadvantages:
+
+Needs an extra CSS file.
+
+Page may load slightly slower (because it loads 2 files).
+
+✅ 2. Internal CSS
+
+CSS is written inside the HTML file, in the <head> section, inside <style>.
+
+Affects only that page.
+
+👉 Example:
+
+<style>
+    h1 { color: green; }
+</style>
+
+
+📌 Advantages:
+
+No extra file needed.
+
+Good for small projects or single page websites.
+
+📌 Disadvantages:
+
+Styles apply only to that page.
+
+Not good for big projects.
+
+✅ 3. Inline CSS
+
+CSS is written directly inside an HTML tag using the style attribute.
+
+Used for quick changes or testing.
+
+👉 Example:
+
+<h1 style="color: red;">Hello</h1>
+
+
+📌 Advantages:
+
+Very quick and easy to apply.
+
+No need for <style> or separate file.
+
+📌 Disadvantages:
+
+Messy code if used too much.
+
+Hard to maintain (styles scattered inside HTML).

@@ -1,0 +1,73 @@
+🔹 What are CSS Selectors?
+
+CSS selectors are patterns used in CSS to select and style HTML elements.
+They answer the question: “Which element(s) should get this style?”
+
+1. Basic Selectors
+
+Tag Selector → Selects elements by their tag name.
+Example: h1 { color: red; } → all <h1> become red.
+👉 Use when you want to style all elements of the same type.
+
+Class Selector → Selects elements with a specific class (using .).
+Example: .highlight { color: blue; } → only elements with class="highlight".
+👉 Use for styling multiple elements with the same design.
+
+ID Selector → Selects an element with a specific ID (using #).
+Example: #main { background: yellow; } → only element with id="main".
+👉 Use for a single unique element.
+
+2. Combinators
+
+These selectors show the relationship between elements.
+
+Descendant ( ) → Selects all elements inside another element.
+Example: div p → all <p> inside a <div>.
+
+Child (>) → Selects only direct children.
+Example: div > p → only <p> directly inside a <div>.
+
+Adjacent Sibling (+) → Selects the element that comes immediately after another.
+Example: h2 + p → the first <p> right after <h2>.
+
+General Sibling (~) → Selects all siblings after a given element.
+Example: h2 ~ p → all <p> after <h2> in the same parent.
+
+3. Pseudo-Selectors
+
+Pseudo-Classes → Apply style based on an element’s state or position.
+Examples:
+
+a:hover → changes a link’s color when hovered.
+
+p:first-child → styles only the first <p> in a parent.
+
+Pseudo-Elements → Style parts of an element.
+Examples:
+
+p::first-letter → styles only the first letter of a paragraph.
+
+p::after → adds extra content after each paragraph.
+
+4. Special Selectors
+
+Attribute Selector → Selects elements based on attribute or value.
+Example: input[type="text"] → only <input> of type text.
+
+Universal Selector (*) → Selects all elements.
+Example: * { margin: 0; } → resets margins for everything.
+
+Grouping Selector (,) → Styles multiple selectors at once.
+Example: h1, h2, p { color: gray; } → all headings and paragraphs are gray.
+
+✅ Tips
+
+Use classes when you want reusable styles.
+
+Use IDs only for unique elements.
+
+Use combinators to control parent-child and sibling relationships.
+
+Use pseudo-classes for user interaction (like hover).
+
+Use pseudo-elements to style parts of content without adding extra HTML.
