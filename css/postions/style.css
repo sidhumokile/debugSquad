@@ -33,7 +33,7 @@ section{
 }
 .sticky{
     position: sticky;
-    top: 0;
+    top: 10px;
     left: 200px;
     background-color: lightyellow;
 }
