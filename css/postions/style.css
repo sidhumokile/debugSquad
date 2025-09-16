@@ -1,52 +1,39 @@
-
-
-.static {
-    position: static;
-    background-color: lightgreen;
-    text-align: center;
-    height: 100px;
+.box{
     width: 100px;
-
-
+    height: 100px;
+    margin: 20px;
+    text-align: center;
+    background-color: wheat;
+    border-radius: 10px;
 }
-
-.relative {
+.static{
+    position: static;
+    background-color: lightcoral;
+}
+section{
+     border: 2px solid black;
+        height: 400px;                                                                                                              
+    position: relative; 
+}
+.relative{
     position: relative;
     background-color: lightblue;
-    height: 100px;
-    text-align: center;
-    width: 100px;
-    margin: 5px;
-left: 200px;
 }
-.absolute {
-    background-color: lightcoral;
-    height: 100px;
-    text-align: center;
-    width: 100px;
-    margin: 5px;
-
-
+.absolute{
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    background-color: lightgreen;
 }
-.fixed {
-    background-color: lightpink;
-    height: 100px;
-    text-align: center;
-    width: 100px;
-    margin: 5px;
-    left: 200px;
-    top: 0;
+.fixed{
     position: fixed;
-    
+    top: 10px;
+    right: 100px;
+    background-color: lightpink;
 }
-.sticky {
-    background-color: lightyellow;
-    height: 100px;
-    text-align: center;
-    width: 100px;
-    margin: 5px;
-    left: 200px;
-    bottom: 200px;
+.sticky{
     position: sticky;
-
+    top: 0;
+    left: 200px;
+    background-color: lightyellow;
 }

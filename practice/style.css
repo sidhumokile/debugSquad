@@ -1,0 +1,32 @@
+body {
+    
+    /* class selector */
+    .highlight {
+        background-color: yellow;
+        color: green;
+        front-weight: bold;
+    }
+    .specialhighlight {
+        color: red;
+        font-style: italic;
+        text-decoration: underline;
+        background-color: lightgreen;
+        border: 2px solid black;
+    }
+    /* id selector */
+    #unique {
+        font-size: 20px;
+        color: blue;
+        background-color: lightgray;
+        border: 2px dashed red;
+    }
+    /* universal selector */
+    * {
+        font-family: Arial, sans-serif;
+        color: gray;
+        border: 2px black;
+        text-align: center;
+    padding: 10px;
+    }
+
+}

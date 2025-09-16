@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CSS Selectors Demo</h1>
+
+  <h2>Basic Selectors</h2>
+  <p>This is a normal paragraph (Element Selector).</p>
+  <p class="highlight">This paragraph uses a <b>Class Selector</b>.</p>
+  <p class="specialhighlight">This paragraph uses a <b>Class Selector</b>.</p>
+  <p id="unique">This paragraph uses an <b>ID Selector</b>.</p>
+
+  <h2>Combinator Selectors</h2>
+  <div>
+    <h3>Child Selector Example</h3>
+    <p>This paragraph is inside a div (Descendant Selector).</p>
+  </div>
+  <p>This paragraph comes right after h2 (Adjacent Sibling Selector).</p>
+  <ul>
+    <li>Item 1 (affected by General Sibling Selector)</li>
+    <li>Item 2</li>
+  </ul>
+
+  <h2>Other Selectors</h2>
+  <p>Form Example:</p>
+  <input type="text" placeholder="Attribute Selector Example">
+  <br><br>
+  <a href="#">Hover over this link (Pseudo-class)</a>
+    
+</body>
+</html>
