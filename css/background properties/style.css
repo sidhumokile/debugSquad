@@ -1,0 +1,59 @@
+
+    
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Example 1: Full Page Background */
+.example1 {
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image: url("https://picsum.photos/id/1018/1200/800");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Example 2: Card with Pattern Background */
+.example2 {
+  padding: 50px;
+  background-color: #f0f0f0;
+}
+
+.card {
+  max-width: 500px;
+  margin: auto;
+  padding: 30px;
+  border: 5px dashed #333;
+  color: #222;
+
+  background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+  background-repeat: repeat;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-size: auto;
+}
+
+/* Example 3: Multiple Background Layers */
+.example3 {
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  text-align: center;
+  background-size: contain;
+
+  background: 
+    url("https://picsum.photos/id/1025/400/300") no-repeat right bottom/150px 150px,
+    url("https://picsum.photos/id/1003/1200/800") no-repeat center/cover;
+}

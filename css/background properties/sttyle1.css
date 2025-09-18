@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+  /* Real-time: nice gradient background for whole page */
+  background-image: url(/assets/images/The_Great_Wall_of_China_at_Jinshanling-edit\ \(1\).jpg)
+
+}
+
+/* Profile Card */
+.profile-card {
+  width: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  color: #fff;
+
+  /* Real-time: Background image with gradient overlay */
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)),
+    url("/assets/images/download.jpg") no-repeat center/cover;
+}
+
+/* Header section (for avatar) */
+.profile-header {
+  padding: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+
+  /* Real-time: avatar pop-out with background-clip */
+  background-clip: content-box;
+}
+
+/* Content */
+.profile-content {
+  padding: 20px;
+}
+
+.profile-content h2 {
+  margin: 10px 0 5px;
+}
+
+.profile-content p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #ff9800;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background:grey;
+}
