@@ -1,0 +1,154 @@
+
+*{
+    padding: 0;
+    margin: 0;
+box-sizing: border-box;
+align-items: center;
+
+}
+body{
+    line-height: 1.6;
+    background: #fff;
+    color: #222;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    align-items: centre;
+    border-bottom: 1px solid #ddd;
+     
+}
+.navbar .logo{
+    font-weight: bold: ;
+      font-size:20px;
+
+}
+.navbar ul{
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    font-weight: 500;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.hero-text{
+    max-width: 60%;
+}
+.hero-text h1{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.hero-text p{
+    margin-bottom: 20px;
+    color: black;
+}
+.hero-imag img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.button{
+    background: black;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.service{
+    display:grid;
+    padding: 20px 50px;
+    gap: 20px;
+    border: #222;
+}
+.card{
+    background: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(239, 216, 216);
+}
+.founders{
+    display: flex;
+    padding: 40px 40px;
+    gap: 10px;
+    border: #0a0a0a;
+}
+.founder{
+    flex: 1;
+    border-radius: 12px;
+    background: rgb(166, 227, 244);
+    padding: 10px;
+    text-align: center;
+    border: 1px solid rgb(188, 170, 170);
+}
+.founder-b{
+     flex: 1;
+    border-radius: 12px;
+    background: rgb(240, 246, 121);
+    padding: 10px;
+    text-align: center;
+     border: 1px solid rgb(188, 170, 170);
+
+}
+.founder img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 50px;
+
+}
+.founder-b img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 50px;
+
+}
+.founders .role{
+    font-weight: bold;
+    margin-bottom: 8px;
+
+}
+.contact{
+    background: rgb(253, 233, 233);
+    text-align: center;
+    border-radius: 12px;
+    padding: 30px;
+    margin: 30px 50px;
+}
+.contact h2{
+    margin-bottom: 10px;
+}
+.contact p{
+    margin-bottom: 20px;
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact input,.contact textarea{
+    padding: 10px;
+    border: 1px solid rgb(51, 46, 46);
+    border-radius: 6px;
+    width: 100%;
+}
+.btn{
+    background: rgb(234, 119, 226);
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
