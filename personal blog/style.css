@@ -89,7 +89,7 @@ body {
 
 .founders {
     display: flex;
-    padding: 40px 40px;
+    padding: 40px 50px;
     gap: 10px;
     border: #0a0a0a;
 }
