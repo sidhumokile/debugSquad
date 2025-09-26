@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+}
+.container{
+    height: 600px;
+    width: 80%;
+    background-color: rgb(132, 177, 177);
+    margin: 100px auto;
+    border-radius: 10px;
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+    position: relative;
+ }
+.container .box{
+height: 100px;
+width: 100px;
+background-color: rgb(103, 195, 103);
+border-radius: 10px;
+justify-content: center;
+align-items: center;
+display: flex;
+color: aliceblue;
+font-size: larger;
+animation: travel 8s linear infinite;
+top: 0;
+left: 0;
+position: absolute;
+}
+
+
+
+    @keyframes travel {
+         0% {
+        transform: translate(0, 0); 
+      }
+      25% {
+        transform: translate(1428px, 0);
+      }
+      50% {
+        transform: translate(1428px, 500px);
+    } 
+    75% {
+        transform: translate(0, 500px);
+    } 
+      100% {
+        transform: translate(0,0);
+    }       
+
+    }
+   
+
+   
