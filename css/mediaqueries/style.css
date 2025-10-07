@@ -8,8 +8,10 @@
  border-radius: 8px;
 }
 .nav{
-    gap: 50px;
+    gap: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 a{
     color: black;
@@ -65,15 +67,10 @@ button {
 }
 
 
-@media (min-width: 600px) {
-  .product-card {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
-  }
-}
 
 
-@media (min-width: 600px) {
+
+@media (min-width: 426px) {
   .product-card {
     flex: 1 1 48%;    
     max-width: 48%;
@@ -81,7 +78,7 @@ button {
 }
 
 
-@media (min-width: 992px) {
+@media (min-width: 769px) {
   .product-card {
     flex: 1 1 30%;    
     max-width: 30%;
