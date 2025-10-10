@@ -127,3 +127,73 @@ obtainMarks = obtainMarks + 10
 console.log("total",totalMarks);
 console.log("obtain",obtainMarks);
 console.log("highest",highMarks);
+
+// ** scopes in js**//
+
+// scope means : Where a variable can be accessed or used in your code.
+
+// types of scopes 
+// 1.  global scope
+// 2. functon scope
+// 3. block scope
+
+// 1. Global scope:
+
+// If you declare a variable outside of any function or block,
+// it has global scope — it can be used anywhere in the program
+
+
+///
+let name = "Sidhu"; // Global scope
+
+function showName() {
+  console.log(name); // can access global variable
+}
+
+showName();  // Output: Sidhu
+console.log(name); // Output: Sidhu
+
+
+//2. function (local) scope
+// If you declare a variable inside a function,
+// it is only accessible inside that function.
+
+
+function greet(){
+    let msg="hello";
+    console.log(msg);
+
+}
+greet();//output: hello
+// console.log(msg)//error not define//
+// varable msg lives only inside the function**//
+
+// Block scope//
+// 
+// If you declare a variable inside {} curly braces (like in if, for, etc.)
+// using let or const, it is accessible only inside that block.
+
+if (true){
+    let player ="Virat"; //block scope
+    console.log(player); // o/p: virat
+}
+
+// console.log(city); //error:not defined
+
+// real time 
+
+let lif=5; // global
+function multiply(){
+let result= lif*2;  // function
+
+if (true){
+    const means="cal done";// block scope
+    console.log(means);
+
+}
+
+
+// console.log(mean);
+console.log(result);
+}
+multiply()
