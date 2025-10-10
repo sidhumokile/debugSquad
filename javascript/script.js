@@ -178,7 +178,7 @@ if (true){
     console.log(player); // o/p: virat
 }
 
-// console.log(city); //error:not defined
+// console.log(player); //error:not defined
 
 // real time 
 
