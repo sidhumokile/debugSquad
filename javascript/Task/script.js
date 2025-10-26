@@ -144,11 +144,11 @@ else if (temp>=35){
 // The program should print an eligibility message accordingly
 
 
-let age=prompt("enter your age");
-console.log("your age :"+age);
+let ages=prompt("enter your age");
+console.log("your age :"+ages);
 let income=prompt("enter your monthly income");
 console.log("your monthly income :"+income);
-if (age>=18){
+if (ages>=18){
     if(income<20000){
         console.log("not eligible for loan");
     }
