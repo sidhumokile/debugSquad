@@ -11,32 +11,32 @@
 // bill summary, including the discount applied (if any).
 
 
-let amount=prompt("enter the amount");
-console.log("your total billing amount="+amount);
-let discount=0;
+// let amount=prompt("enter the amount");
+// console.log("your total billing amount="+amount);
+// let discount=0;
 
-if(amount<=1000){
-    console.log("No discount");
+// if(amount<=1000){
+//     console.log("No discount");
     
-}
- else if (amount>=1000 && amount<=2000)
-    {
-    console.log("after ten percent discount");
-    discount=0.10*amount;
+// }
+//  else if (amount>=1000 && amount<=2000)
+//     {
+//     console.log("after ten percent discount");
+//     discount=0.10*amount;
    
-}
-else if (amount>=2000 && amount<=5000){
-    console.log("after Twenty percent discount");
-    discount=0.20*amount;
+// }
+// else if (amount>=2000 && amount<=5000){
+//     console.log("after Twenty percent discount");
+//     discount=0.20*amount;
 
-}
-else if (amount>5000) {
-    console.log("thirty percent discount and free delivary");
-    discount=0.30*amount;
-}
+// }
+// else if (amount>5000) {
+//     console.log("thirty percent discount and free delivary");
+//     discount=0.30*amount;
+// }
 
-let final = amount - discount;
-console.log("final price of your bill ="+final);
+// let final = amount - discount;
+// console.log("final price of your bill ="+final);
 
 
 
@@ -218,32 +218,32 @@ else{
 // * Else route to “Senior Citizen Section.”
 // Students should combine both condition checks logically.
 
-let age=parseInt(prompt("enter your age"));
-console.log("your age "+age);
-let issue =prompt(" is it emergency : yes/no");
-if(issue=="yes"){
-    console.log("Send to Emergency Room immediately.");
-}
-else if(age<10){
-    if(issue=="yes"){
-        console.log("Send to Emergency Room immediately.");
-    }
-    else{
-        console.log("route to pediatic section");
-    }
-}
-else if(age>=10 && age<60){
-    if(issue=="yes"){
-        console.log("Send to Emergency Room immediately.");
-    }
-    else{
-        console.log("route to Genearl section");
-    }
+// let age=parseInt(prompt("enter your age"));
+// console.log("your age "+age);
+// let issue =prompt(" is it emergency : yes/no");
+// if(issue=="yes"){
+//     console.log("Send to Emergency Room immediately.");
+// }
+// else if(age<10){
+//     if(issue=="yes"){
+//         console.log("Send to Emergency Room immediately.");
+//     }
+//     else{
+//         console.log("route to pediatic section");
+//     }
+// }
+// else if(age>=10 && age<60){
+//     if(issue=="yes"){
+//         console.log("Send to Emergency Room immediately.");
+//     }
+//     else{
+//         console.log("route to Genearl section");
+//     }
 
-}
-else{
-    console.log("route to senior citizen section");
-}
+// }
+// else{
+//     console.log("route to senior citizen section");
+// }
 
 // 8. Electricity Bill Estimator
 // Create a program to estimate electricity bills based on total units consumed:
@@ -257,42 +257,42 @@ else{
 // messages.
 
 
-let units=parseInt(prompt("Enter total units consumed :"));
-console.log("units consumed :"+units);
+// let units=parseInt(prompt("Enter total units consumed :"));
+// console.log("units consumed :"+units);
 
-let rate=0;
-let penality=0;
-let total=0;
+// let rate=0;
+// let penality=0;
+// let total=0;
 
-if(units<100){
-    total=100;
-    console.log("minium charges are applicable ");
-}
-else if(units>=100 && units<300){
-    rate=5;
-    total=units*rate;
-    console.log("normal conusmption");
-}
-else if(units>=300 && units<500){
-    rate=8;
-    total=units*rate;
-    console.log("high rate conusmption , tips :use LED lights and switch off unwanted electic devices");
-}
+// if(units<100){
+//     total=100;
+//     console.log("minium charges are applicable ");
+// }
+// else if(units>=100 && units<300){
+//     rate=5;
+//     total=units*rate;
+//     console.log("normal conusmption");
+// }
+// else if(units>=300 && units<500){
+//     rate=8;
+//     total=units*rate;
+//     console.log("high rate conusmption , tips :use LED lights and switch off unwanted electic devices");
+// }
 
-else if(units>500){
-    rate=10;
-    penality=500
-    total=units*rate+penality;
-    console.log("Alert :high conusmption, penality will applicable");
-}
+// else if(units>500){
+//     rate=10;
+//     penality=500
+//     total=units*rate+penality;
+//     console.log("Alert :high conusmption, penality will applicable");
+// }
 
-else{
-    console.log("invalid units")
-}
+// else{
+//     console.log("invalid units")
+// }
 
-console.log("rate per unit"+rate);
-console.log("penality "+penality);
-console.log("total payable amount :" +total);
+// console.log("rate per unit"+rate);
+// console.log("penality "+penality);
+// console.log("total payable amount :" +total);
 
 
 // 9. Mobile Data Plan Advisor
@@ -476,38 +476,38 @@ console.log("final amount :"+finalamount);
 // print the total payable amount with messages.
 
 
-let room=prompt("what is your room type standard/deluxe/suite");
-console.log("your room type :"+room);
-let ngt=parseInt(prompt(" no. of nights want to stay"));
-console.log("number of nights :"+ngt);
-let rating=parseInt(prompt("customer raking from 1-5"));
-console.log("your rating :"+rating);
+// let room=prompt("what is your room type standard/deluxe/suite");
+// console.log("your room type :"+room);
+// let ngt=parseInt(prompt(" no. of nights want to stay"));
+// console.log("number of nights :"+ngt);
+// let rating=parseInt(prompt("customer raking from 1-5"));
+// console.log("your rating :"+rating);
 
 
-let ngtstay=0;
+// let ngtstay=0;
 
-if(room=="standard"){
-    ngtstay=1000;
-}
-else if (room=="deluxe"){
-    ngtstay=2000;
-}
-else if (room=="suite"){
-    ngtstay=3000;
-}
-else{
-    console.log("invalid")
-}
-let total=ngtstay*ngt;
+// if(room=="standard"){
+//     ngtstay=1000;
+// }
+// else if (room=="deluxe"){
+//     ngtstay=2000;
+// }
+// else if (room=="suite"){
+//     ngtstay=3000;
+// }
+// else{
+//     console.log("invalid")
+// }
+// let total=ngtstay*ngt;
 
-if (rating<4){
-    total +=total*0.10;
-}
-if (ngt>5){
-    total -=total*0.05;
+// if (rating<4){
+//     total +=total*0.10;
+// }
+// if (ngt>5){
+//     total -=total*0.05;
 
-}
-console.log("total amount :"+total);
+// }
+// console.log("total amount :"+total);
 
 
 // 14. Employee Performance Bonus Calculator
