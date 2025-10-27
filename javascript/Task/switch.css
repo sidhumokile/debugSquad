@@ -1,0 +1,113 @@
+body{
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container{
+    text-align: center;
+
+}
+.logo{
+    
+    color: rgb(90, 90, 194);
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+.card{
+    background: rgb(255, 254, 254);
+    padding: 25px 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    
+}
+.card h2{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+p{
+    color: rgb(40, 45, 45);
+    font-weight: 15px;
+    margin-bottom: 15px;
+}
+.name{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+input{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.birth{
+    display: flex;
+    justify-content: space-between;
+}
+.birth select{
+    display: flex;
+   width: 30%;
+   padding: 8px;
+   border: 1px solid rgb(72, 68, 68);
+   border-radius: 5px;
+   
+    
+}
+
+
+select{
+    width: 40px;
+    padding: 8px;
+    border: 1px solid black;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+}
+.gen{
+    justify-content: space-between;
+    margin: 10px 0;
+    display: flex;
+
+}
+
+.gen label{
+    flex: 1;
+    display: flex;
+     width: 20px;
+    padding: 8px;
+    border: 1px solid rgb(77, 73, 73);
+    margin-bottom: 10px;
+    border-radius: 5px;
+} 
+
+input[type="text"],input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0;
+    
+}
+
+button{
+    background-color: rgb(71, 200, 71);
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(90, 90, 194);
+}
+
