@@ -1,21 +1,21 @@
 body{
     background: whitesmoke;
     display: flex;
-    justify-content: center;
-    align-items: center;
+     justify-content: center; 
+    /* align-items: center; */
     
 }
 
-.container{
-    text-align: center;
 
-}
+
 .logo{
     
     color: rgb(90, 90, 194);
     font-size: 50px;
     font-weight: bold;
     margin-bottom: 10px;
+    justify-content: center;
+    text-align: center;
 
 }
 .card{
@@ -29,12 +29,14 @@ body{
 .card h2{
     font-weight: 600;
     font-size: 24px;
+    text-align: center;
 }
 
 p{
     color: rgb(40, 45, 45);
     font-weight: 15px;
     margin-bottom: 15px;
+    text-align: center;
 }
 .name{
     display: flex;
@@ -54,7 +56,7 @@ input{
 }
 .birth select{
     display: flex;
-   width: 30%;
+   width: 100%;
    padding: 8px;
    border: 1px solid rgb(72, 68, 68);
    border-radius: 5px;
@@ -80,6 +82,7 @@ select{
 }
 
 .gen label{
+    width: 100%;
     flex: 1;
     display: flex;
      width: 20px;
@@ -90,7 +93,7 @@ select{
 } 
 
 input[type="text"],input[type="password"]{
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin: 6px 0;
     
@@ -100,14 +103,16 @@ button{
     background-color: rgb(71, 200, 71);
     padding: 10px;
     border-radius: 5px;
-    width: 100%;
+    width: 50%;
     color: white;
     font-weight: bold;
     font-size: 16px;
     border: none;
+    margin-left: 25%;
 }
 a{
     text-decoration: none;
     color: rgb(90, 90, 194);
+    margin-left: 30%;
 }
 
