@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-2</title>
+</head>
+<body>
+    <!-- 2. Discount Table
+Loop through prices and display a table with Original Price and 10% Discounted Price.
+let prices = [1000, 2000, 3000, 1500] -->
+<h2>Discount Table</h2>
+  <table id="discount" border="1" cellpadding="8" cellspacing="0">
+    <tr>
+      <th>Original Price</th>
+      <th>10% Discounted </th>
+    </tr>
+  </table>
+
+  <script>
+    let prices = [1000, 2000, 3000, 1500];
+    let table = document.getElementById("discount");
+
+    for (let i = 0; i < prices.length; i++) {
+      let discounted = prices[i] - (prices[i] * 0.10);
+      table.innerHTML += `
+        <tr>
+          <td>${prices[i]}</td>
+          <td>${discounted}</td>
+        </tr>
+      `;
+    }
+  </script>
+
+
+
+
+
+    
+</body>
+</html>

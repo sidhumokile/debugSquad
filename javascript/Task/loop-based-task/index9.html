@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-9</title>
+</head>
+<body>
+    <!-- 9. Show Stock-Based Product List
+From a product array, display names until stock becomes 0 using while. -->
+    <h2>stock-based product list</h2>
+    <div id="stocks"></div>
+
+    <script>
+        let items=[
+        { name: "Keyboard", stock: 3 },
+         { name: "Headphones", stock: 5 },
+{ name: "Mouse", stock: 0 },
+{ name: "Charger", stock: 2 }
+];
+let i=0;
+let list=document.getElementById("stocks");
+
+while(i<items.length){
+    if(items[i].stock===0){
+        list.innerHTML+="<br>ended at :"+items[i].name+"</br>";
+        break;
+    }
+    list.innerHTML+=items[i].name+"-stock :"+items[i].stock+"<br>";
+    i++;
+}
+    </script>
+</body>
+</html>

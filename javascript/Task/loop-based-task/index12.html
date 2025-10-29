@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 12. Show Cart Status At Least Once
+If cart is empty, show "Cart is empty" once using do...while. -->
+<h2>Cart status</h2>
+<div id="status"></div>
+<script>
+    let cart=[];
+   let i=0;
+    do{
+        if(cart.length===0){
+            document.getElementById("status").innerHTML="cart is empty";
+        }
+        else{
+            document.getElementById("status").innerHTML="items in cart";
+        }
+        i++;
+    }while(cart.length>0);
+
+</script>
+        
+    </body>
+    </html>
+    
+</body>
+</html>

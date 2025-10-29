@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAsk-8</title>
+</head>
+<body>
+    <!-- 8. Calculate Cart Total
+Given an array of cart prices, use while loop to calculate and display total amount.
+let cart = [499, 299, 1299, 999]; -->
+<h2>cart total</h2><br>
+<p>cart=[499, 299, 1299, 999]</p>
+<div id="cart"></div>
+<script> 
+    let total=[499,299,1299,999];
+    let i=0;
+    let cart=0;
+
+    while(i<total.length){
+        cart +=total[i];
+        i++;
+    }
+    document.getElementById("cart").innerHTML="total cart amount :"+cart;
+
+</script>
+</body>
+</html>

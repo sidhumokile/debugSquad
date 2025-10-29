@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAsk-7</title>
+</head>
+<body>
+    <!-- 7. Find Item Until Match
+Loop through product names until you find “Camera”. Stop the loop once found. -->
+
+<h2>finding Item</h2>
+<div id="find"></div>
+<script>
+    let items=["mobile","buds","camera","laptop","watch"];
+    let find=document.getElementById("find");
+
+    for(let i=0;i<items.length;i++){
+        find.innerHTML+=items[i]+"<br>";
+    
+
+    if(items[i]==="camera"){
+        find.innerHTML+="<br> camera founded </br>";
+        break;
+    }
+}
+</script>
+</body>
+</html>

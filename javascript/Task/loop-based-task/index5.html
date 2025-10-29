@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task-5</title>
+</head>
+<body>
+    <!-- 5. Show Only Products with Stock
+Loop through an array of products with stock and display only those where stock > 0.
+[
+{ name: "Keyboard", stock: 3 },
+{ name: "Mouse", stock: 0 },
+{ name: "Charger", stock: 2 }
+] -->
+
+<h2>product in stock</h2>
+<ul id="stocks"></ul>
+
+<script>
+    let product=[
+{ name: "Keyboard", stock: 3 },
+{ name: "Mouse", stock: 0 },
+{ name: "Charger", stock: 2 }
+]
+let list=document.getElementById("stocks");
+
+for(let i=0;i<product.length;i++){
+    if(product[i].stock>0){
+        list.innerHTML +=`<li>${product[i].name}-stock:${product[i].stock}</li>`;
+    }
+
+}
+
+</script>
+    
+</body>
+</html>
