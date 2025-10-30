@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 15. Add Product Until Stock Zero
+Simulate a product being added until stock reduces to 0. Show how many times it was
+added.
+     -->
+
+     <h2>add product untill stock zero</h2>
+     <div id="stock"></div>
+
+     <script>
+        let items=5;
+        let total=0;
+        let result="";
+
+        do{
+            total++;
+            items--;
+            result+=`remaing stock :${items}<br>`;
+        }while(items>0);
+
+        result +=`<br>${total}`;
+        document.getElementById("stock").innerHTML=result;
+     </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-13</title>
+</head>
+<body>
+
+    <!-- 13. Flash Sale Display
+Display product prices after applying 20% discount using do...while -->
+
+<h2>Flash sale </h2>
+<div id="sale"></div>
+
+<script>
+    let product=[1000,2000,4500,1500,2000];
+    let i=0;
+    let result="";
+
+    do{
+        let discount=0.20*product[i];
+        let final=product[i]-discount;
+    result+=`original:${product[i]}  after discount:${final}<br>`;
+        i++;
+    }while(i<product.length);
+document.getElementById("sale").innerHTML=result;
+</script>
+    
+</body>
+</html>
