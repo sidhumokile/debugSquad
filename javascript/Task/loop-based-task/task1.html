@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Billing Card</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f2f6;
+    padding: 20px;
+  }
+  .card {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px gray;
+  }
+  h2 {
+    text-align: center;
+  }
+  input {
+    width: 95%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  button {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: darkgreen;
+  }
+  .item-list {
+    margin-top: 15px;
+    border-top: 1px solid gray;
+    padding-top: 10px;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  .total {
+    border-top: 2px solid black;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>🧾 Billing Summary</h2>
+
+  <label>Item Name:</label>
+  <input type="text" id="itemName">
+
+  <label>Price:</label>
+  <input type="number" id="itemPrice">
+
+  <label>Quantity:</label>
+  <input type="number" id="itemQty">
+
+  <button onclick="addItem()">Add Item</button>
+
+  <label>Tax Percentage (%):</label>
+  <input type="number" id="tax">
+
+  <button onclick="calculateBill()">Calculate Bill</button>
+
+  <div class="item-list" id="itemsList"></div>
+  <div class="total" id="totalBill"></div>
+</div>
+
+<script>
+  
+  let items = [];
+  function addItem() {
+    let name = document.getElementById("itemName").value;
+    let price = parseFloat(document.getElementById("itemPrice").value);
+    let qty = parseInt(document.getElementById("itemQty").value);
+
+    if (name === "" || isNaN(price) || isNaN(qty)) {
+      alert("Please enter valid item details!");
+      return;
+    }
+    items.push({ name: name, price: price, qty: qty });
+
+  
+    document.getElementById("itemName").value = "";
+    document.getElementById("itemPrice").value = "";
+    document.getElementById("itemQty").value = "";
+
+    showItems();
+  }
+
+  
+  function showItems() {
+    let listDiv = document.getElementById("itemsList");
+    listDiv.innerHTML = ""; 
+
+    items.forEach(function(item) {
+      let total = item.price * item.qty;
+      listDiv.innerHTML += `
+        <div class="item">
+          <span>${item.name} (x${item.qty})</span>
+          <span>₹${total.toFixed(2)}</span>
+        </div>
+      `;
+    });
+  }
+
+
+  function calculateBill() {
+    let taxPercent = parseFloat(document.getElementById("tax").value) || 0;
+    let totalDiv = document.getElementById("totalBill");
+
+    let subTotal = 0;
+    items.forEach(function(item) {
+      subTotal += item.price * item.qty;
+    });
+
+    let taxAmount = (subTotal * taxPercent) / 100;
+    let grandTotal = subTotal + taxAmount;
+
+    totalDiv.innerHTML = `
+      Subtotal: ₹${subTotal.toFixed(2)} <br>
+      Tax (${taxPercent}%): ₹${taxAmount.toFixed(2)} <br>
+      <hr>
+      Grand Total: ₹${grandTotal.toFixed(2)}
+    `;
+  }
+</script>
+
+</body>
+</html>
