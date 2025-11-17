@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <script src="task3.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Task 1: Add Item to Cart
+Objective: Add an item into a shopping cart using push()
+Instructions:
+1. Create an empty array named cart.
+2. Take input from the user for product name.
+3. When the user clicks the “Add to Cart” button, use push() to add the product to the
+array.
+4. Display all the items in the cart on the screen.
+Hint: Use join() to show cart items separated by commas.
+Expected Output:Ὥ Cart: Mouse, Keyboard -->
+
+<h2>add to cart itema</h2> 
+<input type="text" id="product">
+<button onclick="addto()">add to cart</button>  
+<div id="cart"></div>
+    <script>
+        let items=[];
+        function addto(){
+
+            let productitems=document.getElementById("product").value;
+
+            if(productitems!==""){
+                items.push(productitems)
+                 document.getElementById("cart").innerHTML = items.join(", ");
+                 document.getElementById("product").value = "";
+
+
+            }
+            else {
+        alert("Please enter a product name!");
+        }
+    }
+
+        
+    </script>
+</body>
+</html>

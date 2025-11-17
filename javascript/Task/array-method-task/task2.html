@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Task 2: Remove the Last Added Item
+Objective: Remove the last item using pop()
+Instructions:
+1. Use the same cart array from Task 1.
+2. Add a button named “Remove Last”.
+3. When clicked, remove the last product using pop().
+4. Update the displayed cart list.
+Expected Output:Before: Mouse, KeyboardAfter: Mouse
+     -->
+
+     <h2>add to cart itema</h2> 
+<input type="text" id="product">
+<button onclick="addto()">add to cart</button> 
+
+<button onclick="remove()">remove last item</button>
+<div id="cart"></div>
+    <script>
+        let items=[];
+        function addto(){
+
+            let productitems=document.getElementById("product").value;
+
+            if(productitems!==""){
+                items.push(productitems); 
+        showCart(); 
+                items.push(productitems)
+                 document.getElementById("cart").innerHTML = items.join(", ");
+                 document.getElementById("product").value = "";
+
+
+            }
+            else {
+        alert("Please enter a product name!");
+        }
+    }
+    function remove(){
+        if(items.length>0){
+            items.pop();
+            showCart()
+        }else{
+            alert("invalid")
+        }
+    }
+ function showCart() {
+      document.getElementById("cart").innerHTML = "Cart: " + items.join(", ");
+    }
+
+</script>
+</body>
+</html>

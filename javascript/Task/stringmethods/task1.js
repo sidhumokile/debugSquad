@@ -201,16 +201,3 @@ else{
 }
 
 
-// #### 9. Search Highlighter
-// • Goal: Highlight all occurrences of a search word within a paragraph using HTML
-// <mark> tags.
-// • Example: Highlight all "React" words with <mark>React</mark>
-// • Concepts Used: replaceAll(), includes(), DOM manipulation
-// • Difficulty: Hard
-// Explanation:
-// 1. Use replaceAll() to replace all occurrences of the search word with <mark> + search
-// word + </mark>.
-// 2. Use DOM manipulation to insert the modified paragraph into the HTML.
-
-
-    
