@@ -3,53 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registerform</title>
+    <title>Register Form</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-     <header class="w-full p-4 bg-black text-white flex justify-between items-center">
-        <div class="logo">
-            <img src="/assets/images/logotask.avif" alt="logo" class="w-14 h-14 rounded-full"></div>
-            
-               <nav class="navbar w-[70%]">
-            <input type="text" name="search" placeholder="Search here" class="border bg-white w-100 h-10 px-2 rounded">
-           
-            <button disabled class="disabled-cursor-not-allowed"><a href="#" class="button bg-white text-black px-4 py-2 rounded ml-35 mr-4">HOME</a></button>
-           <button disabled><a href="#" class="button bg-white text-black px-4 py-2 rounded mx-4" disabled>CART</a></button> 
-           <button ><a href="./login.html" class="button bg-white text-black px-4 py-2 rounded mx-4">LogOut</a></button> 
-            
-        </nav>
-       
-     </div></header>
-     <div class="flex justify-center items-center min-h-screen bg-gray-100">
-        <form action="#" method="post" class="bg-blue-100 p-6 rounded-lg">
-            <h2 class="font-bold text-3xl text-center mb-12 mt-20">Registration Form</h2>
-            <input type="text" id="regname" placeholder="enter Name"class="bg-white mx-10 pl-3"><br><br>
-            <input type="text" placeholder="enter username" id="name" class="bg-white mx-10 pl-3"><br><br>
-            <input type="password" name="" id="password" placeholder="enter password" class="bg-white mx-10 pl-3"><br><br>
-            <input type="email" placeholder="enter Email" id="email" class="bg-white mx-10 pl-3"><br><br>
 
-            <input type="button" id="" onclick="register()" value="Register" class=" w-full bg-blue-500 text-white px-2 py-1 rounded cursor-pointer "> <br>
-            <a href="./login.html" class="text-xs text-center text-blue-900 mx-20 mt-3">Click to login</a>
-        
-        </form>
-     </div>
-
-     <script>
-        function register(){
-            let username=document.getElementById("name").value;
-            let password=document.getElementById("password").value;
-             let email=document.getElementById("email").value;
-
-               if(!username || !password){
-   alert("Fill the Fields..");
-   return;
-  }
-
-
-        }
-     </script>
+<body class="bg-gray-100">
 
     
+    <header class="w-full p-4 bg-black text-white flex justify-between items-center">
+        <div class="logo">
+            <img src="/assets/images/logotask.avif" alt="logo" class="w-14 h-14 rounded-full">
+        </div>
+
+        <nav class="navbar flex items-center gap-4">
+            <input type="text" placeholder="Search here" class="border bg-white h-10 px-2 rounded">
+            <button disabled class="cursor-not-allowed bg-white text-black px-4 py-2 rounded">HOME</button>
+            <button disabled class="cursor-not-allowed bg-white text-black px-4 py-2 rounded">CART</button>
+            <a href="./login.html" class="bg-white text-black px-4 py-2 rounded">Logout</a>
+        </nav>
+    </header>
+
+    
+    <div class="flex justify-center items-center min-h-screen">
+        <form class="bg-blue-100 p-6 rounded-lg shadow-md w-[350px]" onsubmit="return false">
+
+            <h2 class="font-bold text-3xl text-center mb-6 mt-5">Registration Form</h2>
+
+            
+            <p id="alertBox" class="text-red-600 text-center font-semibold mb-4"></p>
+
+            
+            <input type="text" id="regname" placeholder="Enter Name"
+                onkeyup="validateName()"
+                class="w-full bg-white p-2 rounded">
+            <p id="nameError" class="text-red-600 text-sm mb-3"></p>
+
+            
+            <input type="text" id="username" placeholder="Enter Username"
+                onblur="checkUsername()"
+                class="w-full bg-white p-2 rounded">
+            <p id="userError" class="text-red-600 text-sm mb-3"></p>
+
+            
+            <input type="password" id="password" placeholder="Enter Password"
+                onkeyup="validatePassword()"
+                class="w-full bg-white p-2 rounded">
+            <p id="passError" class="text-red-600 text-sm mb-3"></p>
+
+            
+            <input type="email" id="email" placeholder="Enter Email"
+                onblur="validateEmail()"
+                class="w-full bg-white p-2 rounded">
+            <p id="emailError" class="text-red-600 text-sm mb-3"></p>
+
+            
+            <button onclick="register()"
+                class="w-full bg-blue-600 text-white py-2 rounded mt-4">
+                Register
+            </button>
+
+            <a href="./login.html" class="text-xs text-center block text-blue-900 mt-4">
+                Click to login
+            </a>
+
+        </form>
+    </div>
+
+    
+    <script>
+        function validateName() {
+            let name = document.getElementById("regname").value;
+            let error = document.getElementById("nameError");
+
+            if (!/^[A-Za-z ]+$/.test(name)) {
+                error.innerText = "Name should contain letters only";
+                return false;
+            }
+            if (name.trim() === "") {
+        error.innerText = "Name cannot be empty";
+        return false;
+    }
+            error.innerText = "";
+            return true;
+        }
+
+        function checkUsername() {
+            let user = document.getElementById("username").value;
+            let error = document.getElementById("userError");
+
+            if (user.length < 4) {
+                error.innerText = "Username must be at least 4 characters";
+                return false;
+            }
+            error.innerText = "";
+            return true;
+        }
+
+        function validatePassword() {
+            let pass = document.getElementById("password").value;
+            let error = document.getElementById("passError");
+
+            if (pass.length < 6) {
+                error.innerText = "Password must be at least 6 characters";
+                return false;
+            }
+            error.innerText = "";
+            return true;
+        }
+
+        function validateEmail() {
+            let email = document.getElementById("email").value;
+            let error = document.getElementById("emailError");
+
+            let reg = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!reg.test(email)) {
+                error.innerText = "Enter a valid email address";
+                return false;
+            }
+            error.innerText = "";
+            return true;
+        }
+
+        function register() {
+            let alertBox = document.getElementById("alertBox");
+
+            let nameOK = validateName();
+            let userOK = checkUsername();
+            let passOK = validatePassword();
+            let emailOK = validateEmail();
+
+            if (!nameOK || !userOK || !passOK || !emailOK) {
+                alertBox.innerText = " Please fix all errors before submitting!";
+                return;
+            }
+
+            
+            alertBox.innerText = "";
+
+            let fullname = document.getElementById("regname").value;
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let email = document.getElementById("email").value;
+
+            
+            localStorage.setItem("fullname", fullname);
+            localStorage.setItem("username", username);
+            localStorage.setItem("password", password);
+            localStorage.setItem("email", email);
+
+            alertBox.classList.remove("text-red-600");
+            alertBox.classList.add("text-green-700");
+            alertBox.innerText = " Registration Successful!";
+        }
+    </script>
+
 </body>
 </html>
