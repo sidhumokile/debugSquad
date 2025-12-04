@@ -9,31 +9,51 @@
 <body>
     <header class="w-full p-4 bg-black text-white flex justify-between items-center">
         <div class="logo">
-            <img src="/assets/images/logotask.avif" alt="logo" class="w-14 h-14 rounded-full"></div>
-            <nav class="space-x-4">
-          <a href="#" class="text-lg hover:bg-white hover:text-black px-3 py-1 rounded transition">home</a>
-                 <a href="#" class="text-lg hover:bg-white hover:text-black px-3 py-1 rounded transition">about</a>
-            <a href="#" class="text-lg hover:bg-white hover:text-black px-3 py-1 rounded transition">contact</a>
-              <a href="#" class="text-lg hover:bg-white hover:text-black px-3 py-1 rounded transition">help</a>
-              </div>
-       
-    </nav>
-     </div></header>
+            <img src="/assets/images/logotask.avif" alt="logo" class="w-14 h-14 rounded-full">
+        </div>
+
+        <nav class="navbar flex items-center gap-4">
+            <input type="text" placeholder="Search here" class="border bg-white h-10 px-2 rounded">
+            <button disabled class="cursor-not-allowed bg-white text-black px-4 py-2 rounded">HOME</button>
+            <button disabled class="cursor-not-allowed bg-white text-black px-4 py-2 rounded">CART</button>
+            <a href="./regiester.html" class="bg-white text-black px-4 py-2 rounded">Register Here</a>
+        </nav>
+    </header>
 
      <div>
          <div class=" min-h-screen flex justify-center items-center ">
-        <form action="./index.html" id="greet" class="bg-red-100 rounded-lg ">
+        <form action="./index.html" id="greet" class="bg-green-100 rounded-lg ">
             <h2 class="font-bold text-2xl text-center mb-10 mt-17">Login</h2>
             <input type="text" id="name" placeholder="Enter User Name" class="bg-white mx-10 pl-3"><br><br>
             <input type="password" id="password" placeholder="Enter password" class="bg-white mx-10 pl-3"><br><br>
-            <input type="button" id="" onclick="login()" value="LogIn" class=" w-full bg-black text-white px-3 py-1 rounded mx-25"><br>
+            <input type="button" id="" onclick="login()" value="LogIn" class="w-full bg-green-600 text-white py-2 rounded mt-4"><br>
 
-                <a href="./regiester.html" class="text-xs text-center text-blue-900 mx-20">Click Here to Register</a>
+                <a href="./regiester.html" class="text-xs text-center text-blue-500 mx-20">Click Here to Register</a>
         </form>
     </div>
 
      </div>
     <script>
+        function login() {
+    
+        let username = document.getElementById("name").value.trim();
+        let password = document.getElementById("password").value.trim();
+
+        let savedUserName = localStorage.getItem("username");
+        let savedPassword = localStorage.getItem("password");
+
+        
+        if (!username || !password) {
+            alert("Please fill all fields!");
+            return;
+        }
+        if (username === savedUserName && password === savedPassword) {
+            alert("Login Successful!");
+            window.location.href = "index.html";  
+        } else {
+            alert("Invalid Username or Password!");
+        }
+    }
         
     </script>
 </body>
