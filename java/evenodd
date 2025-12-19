@@ -1,0 +1,9 @@
+class evenodd {
+void check(int num){
+if(num%2==0)
+system.out.println(num+"even")
+else
+system.out.println(num+"odd")
+}
+}
+
